@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/* 
+			 *	假如投资的年利率为5%，试求从1000块增长到5000块，需要花费多少年
+			 */
+			
+			// 定义一个while循环来计算每年的钱数
+			var money = 1000, year = 0;
+			
+			// 也可以定义一个计数器记录year
+			
+			while(money < 5000){
+				money *= 1.05;
+				
+				// 使year自增
+				year++;
+			}
+			
+			console.log(money);
+			console.log(year);
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
