@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<script type="text/javascript">
+			// 2.打印1-100之间所有7的倍数的个数及总和
+			var sum_7 = 0, count_7 = 0;
+			for(var i = 1; i <= 100; i++){
+				if(i % 7 == 0){
+					count_7++; // 使计数器自增1
+					sum_7 += i;
+				}
+			}
+			alert("1-100之间所有7的倍数的个数为：" + count_7 + "。\n1-100之间所有7的倍数的总和为：" + sum_7 + "。");
+		</script>
+		
+	</head>
+	<body>
+	</body>
+</html>
