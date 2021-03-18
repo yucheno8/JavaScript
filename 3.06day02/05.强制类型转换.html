@@ -19,6 +19,14 @@
 			 * 			- 但是要注意：null和undefined这两个值没有toString()方法 
 			 * 				如果调用它们的方法，会报错
 			 * 
+			 * 		方式二：
+			 * 			- 调用String()函数，并将被转换的数据作为参数传递给函数
+			 * 			- 使用String()函数做强制类型转换时，
+			 * 				对于Number和Boolean实际上就是调用了toString()方法
+			 * 				但是对于null和undefined，就不会调用toString()方法
+			 * 					它会将 null 直接转换为"null"
+			 * 					将 undefined 直接转换为 "undefined"
+			 * 
 			 */
 			
 			var a = 123;
@@ -31,10 +39,21 @@
 			a = a.toString();
 			
 			a = null;
-			// a = a.toString();
+			// a = a.toString(); // 报错
 			
 			a = undefined;
-			a= a.toString();
+			// a= a.toString(); // 报错
+			
+			a = 123;
+			
+			// 调用toString()函数，来将a转换为字符串
+			a = String(a);
+			
+			a = null;
+			a = String(a);	
+			
+			a = undefined;
+			a = String(a);
 			
 			console.log(typeof a);
 			console.log(a);
@@ -43,6 +62,6 @@
 			
 		</script>
 	</head>
-	<body>
+	<body>	
 	</body>
 </html>
