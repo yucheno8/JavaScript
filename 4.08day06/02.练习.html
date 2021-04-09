@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/* 
+			 *	定义一个函数，判断一个数字是否是偶数，如果是返回true，否则返回false
+			 */
+			
+			/* function even(a){
+				if(a % 2 == 0){
+					alert(a + "是偶数。");
+				}else{
+					alert(a + "不是偶数。");
+				}
+				
+				// 或者
+				 return num % 2 == 0;
+			}
+			even(5); */
+			
+			/* 
+			 *	定义一个函数，可以根据半径计算一个圆的面积，并返回计算结果
+			 */
+			function areaCircle(r){
+				// var area;
+				// area = 3.14 * r * r;
+				return 3.14 * r * r;
+			}
+			// var a = 5;
+			// var s = areaCircle(a);
+			// console.log("圆的面积为" + s);
+			
+			/* 
+			 *	创建一个函数，可以在控制台中输出一个人的信息
+			 * 		可以输出人的name age gender address
+			 * 
+			 * 	实参可以是任意的数据类型，也可以是一个对象
+			 * 		当我们的参数过多时，可以将参数封装到一个对象中，然后通过对象传递
+			 */
+			function sayHello(o){
+				// console.log("o = " + o);
+				console.log("我是" + o.name + "，今年我" + o.age + "岁了，" + "我是一个" + o.gender + "人" + "，我住在" + o.address);
+			}
+			
+			// sayHello("孙悟空",18,"男","花果山");
+			// sayHello("猪八戒",28,"男","高老庄");
+			
+			// 创建一个对象
+			var obj = {
+				name:"孙悟空",
+				age:18,
+				gender:"男",
+				address:"花果山"
+			};
+			
+			// sayHello(obj);
+			
+			/* 
+			 *	实参可以是一个对象，也可以是一个函数
+			 */
+			function fun(a){
+				console.log("a = " + a);
+				// a(obj);
+			}
+			// fun(sayHello);
+			
+			// fun(function(){alert("hello")});
+			
+			fun(areaCircle(10));
+			
+			/* 
+			 *	areaCircle()
+			 * 		- 调用函数
+			 * 		- 相当于使用的是函数的返回值
+			 * 		
+			 * 	areaCircle
+			 * 		- 函数对象
+			 * 		- 相当于直接使用函数对象
+			 */
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
